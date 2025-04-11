@@ -1,0 +1,332 @@
+/* Navbar styling */
+.navbar {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: Urbanist, sans-serif; /* Added a fallback font-family */
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: "Krona One", sans-serif; /* Using Google Font */
+}
+
+/* Search Bar styling */
+.searchBar {
+  width: 450px;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar_responsive {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: solid 1.2px #ddd;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  height: 40px;
+  flex-grow: 1; /* Ensures input takes available space */
+}
+
+.searchBtn {
+  background-color: #4b63fd;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  border: none;
+  display: flex; /* Ensure it aligns properly with the input */
+  justify-content: center;
+  align-items: center;
+  height: 40px;  /* Same height as the input */
+  min-width: 45px; /* Set a minimum width for the button */
+}
+
+.searchBtn:hover {
+  background-color: #1130fd;
+  transition: background-color 0.25s ease-in-out;
+}
+
+/* Navigation Links styling */
+.navLink {
+  display: inline-block;
+  margin-right: 1.5rem; /* Space between each link */
+  position: relative;
+}
+
+.navLink a {
+  color: rgb(230, 230, 230);
+  text-decoration: none; /* Ensures no underline */
+  font-weight: 500;
+  position: relative;
+}
+
+.navLink a:hover {
+  color: #4b63fd; /* Hover effect */
+}
+.navLink a.active {
+  color: #4b63fd; /* Hover effect */
+}
+
+/* Cart Icon styling */
+.cartIcon {
+  font-weight: bolder;
+  text-align: center;
+  color: #afafaf;
+}
+
+.cartIcon:hover {
+  cursor: pointer;
+  color: rgb(230, 230, 230);
+}
+
+.cartSpan {
+  font-size: 0.75rem;
+  padding: 2px 5px;
+  border-radius: 100%;
+  background-color: #4b63fd;
+  color: white;
+}
+
+/* Brand styling */
+.brand_span_1st {
+  color: #4b63fd;
+}
+
+.brand_span_2nd {
+  color: #fec709;
+}
+
+
+/* Mobile Responsive Navbar (d-md-none) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  /* Logo and cart icon on mobile */
+  .logo {
+    flex: 1;
+    margin-left: 0.7rem;
+  }
+
+  /* Menu hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px !important;
+  cursor: pointer;
+}
+.hamburger .line {
+  width: 30px;
+  height: 4px;
+  background-color: #afafaf;
+  border-radius: 1rem;
+  transition: width 0.25s ease-in-out,all 0.25s linear;
+  
+}
+
+/* Different widths in closed state */
+.hamburger .line:nth-child(2) { 
+  width: 22.5px; /* Middle line */
+}
+
+.hamburger .line:last-child { 
+  width: 15px; /* Bottom line */
+}
+
+.hamburger.open .line {
+  width: 30px !important;
+  background-color: rgb(230, 230, 230) !important;
+}
+
+  .dropdownMenu {
+    position: absolute;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform: translateX(-100%); /* Initially off-screen to the right */
+    top: 60px; /* Adjust based on your logo height */
+    left: 0;
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .dropdownMenu .navLink a{color:#333;}
+  .dropdownMenu .navLink a:hover,.dropdownMenu .navLink a.active{color:var(--primary-color);}
+
+  
+  /* When the menu is open, bring it in */
+  .dropdownMenu.open {
+    transform: translateX(0); /* Bring the menu in */
+    
+  }
+  .dropdownMenu .navLink {
+    margin-bottom: 1rem;
+  }
+
+  .cartIcon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Full-width search bar at the bottom */
+  .searchBar_responsive {
+    width: 100%;
+    padding: 0.2rem 0.7rem;
+    backdrop-filter: blur(5px);
+    display: flex !important;
+  }
+
+  
+.searchInput {
+  flex-grow:1;
+  height: 40px;
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 20px 0 0 20px;
+}
+
+
+
+/* Ensure the button stays within the input field */
+.searchBar input, .searchBar button {
+  transition: all 0.25s ease;
+}
+}
+
+/* Desktop Navbar */
+@media (min-width: 768px) {
+  .searchBar_responsive {
+    display: none !important;
+  }
+
+  .dropdownMenu {
+    display: none !important;
+  }
+
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Profile Icon styling */
+.profileIcon {
+  font-weight: bolder;
+  color: #afafaf;
+  cursor: pointer;
+  margin-left: 1rem; /* Space between cart and profile */
+  flex: 1;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.profileIcon.open{color: rgb(230, 230, 230);}
+.profileIcon:hover {
+  color: rgb(230, 230, 230);
+}
+
+.profileIcon img {
+  width: 30px; /* Adjust size of the profile picture */
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Profile dropdown (for mobile) */
+.profileDropdown {
+  position: absolute;
+  right: 0;
+  top: 60px; /* Adjust based on your layout */
+  width: 150px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  transform: translateX(100%); /* Initially off-screen to the right */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.profileDropdown.open {
+  display: block !important;
+  transform: translateX(0) !important;
+}
+
+/* Profile item styling */
+.profileDropdown ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.profileDropdown ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.profileDropdown ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.profileDropdown ul li a:hover {
+  color: #4b63fd;
+}
+
+
+/* navbar links animation */
+/* Default link hover effect */
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 75%;
+  transform: scaleX(0); /* Hidden underline by default */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: transform 0.25s ease-out; /* Smooth animation */
+  transform-origin: bottom right; /* Animation starts from the right */
+}
+
+/* Apply hover animation only for non-active links */
+.navLink:hover:not(a.active)::after {
+  transform: scaleX(1); /* Show underline on hover */
+  transform-origin: bottom left; /* Animation starts from the left */
+}
+.navLink a.active:hover::after {
+  transform: scaleX(0); /* Show underline on hover */
+  transform-origin: bottom left; /* Animation starts from the left */
+}
+/* Styling for active links */
+.navLink a.active::after {
+  content: '';
+  position: absolute;
+  width: 75%;
+  transform: scaleX(1); /* Always show underline for active links */
+  height: 2px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: var(--primary-color); /* Consistent color for active links */
+  transform-origin: bottom left; /* No visual interference */
+  transition: none; /* Disable animation for the active underline */
+}

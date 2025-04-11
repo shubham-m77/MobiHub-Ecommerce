@@ -1,0 +1,190 @@
+.prd_row{padding: 0 2.5rem; display: flex;
+  flex-wrap: wrap;justify-content: center;}
+.primary_hr{border-color: var(--secondary-color);border-width: 3px;opacity: 1;margin-top:-0.9rem !important;}
+.card_main{
+    padding: 1rem 1.25rem !important;
+    height: 455px; /* Set a fixed height (adjust as needed) */
+    overflow: hidden; /* Prevent overflow if content exceeds the card height */
+    display: flex;
+    flex-direction: column;
+    margin:1rem 0;
+    transition: all 0.25s ease-in-out;
+  
+ }
+    .card_main:hover{transform:translateY(-2.5%);
+        border: none !important;border: solid 2px var(--secondary-color) !important;box-shadow: 0 0 5px #e8e8e8 !important;}
+.productImg{height:auto !important;position: relative !important;}
+.card_main a{text-decoration: none;border: none;color:inherit;}
+.card_main hr{border-width: 2px; opacity: 1;border-color: var(--secondary-color);}
+.card_text{margin-top:1rem;background-color: rgba(255, 252, 204, 0.2);backdrop-filter: blur(10px);}
+.card_text h3{font-size: 1.4rem;}
+.price{font-size: 1.25rem;}
+.max_price{text-decoration: line-through;color: #424242;font-size: 1rem;font-weight: 350;}
+.disc_percent{color:var(--primary-color);font-size: 1rem;margin-left: 5px;}
+.add_cart_btn{
+    width: 100%;border: none; background-color: var(--secondary-color);border-radius: 20px;padding: 0.2rem 0.6rem;font-weight: 500;transition:all 0.2s ease-in-out;}
+.add_cart_btn:hover{
+    outline: solid 1.8px #313131;
+    background-color: #ffc801;
+    transform:scale(1.05) ;
+}
+
+
+.feature {
+    background: radial-gradient(circle, rgba(157, 201, 255, 0.1) 50%, rgba(157, 201, 255, 0) 100%);
+    backdrop-filter: blur(15px);
+    padding: 20px;  /* Add padding to the box */
+    border-radius: 10px;  /* Optional: Apply rounded corners */
+  }
+  
+  
+.feature h2{color:#fff;}
+
+/* Product details Page */
+.productDetailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .productImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .productInfo {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .productTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e4e4e4;
+  }
+  
+  .productDescription {
+    font-size: 1.1rem;
+    color: #dbdbdb;
+    /* margin: 20px 0; */
+
+  }
+  
+  .productPriceSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .productPrice {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .productDiscount {
+    font-size: 1.2rem;
+    color: #1fd14b;
+    margin-left: 15px;
+
+  }
+  
+  .productDetails {
+    font-size: 1.1rem;
+    color: #bbbbbb;
+    margin-bottom: 20px;
+  }
+  
+  .productDetails strong {
+    color: #e0e0e0;
+  }
+  
+  .buyNowBtn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buyNowBtn:hover {
+    background-color: var(--primary-color);
+  }
+  .desc_box p{
+    color: #e0e0e0;
+    font-size: 1.25rem;
+  }
+  .maximum_price{text-decoration: line-through;color: #c9c9c9;font-size: 1.1rem;font-weight: 350;}
+
+  .card_main {
+    padding: 1rem 1.25rem;
+    height: 420px; /* default desktop height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0;
+    transition: all 0.25s ease-in-out;
+    background: #fff; /* optional */
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (max-width: 768px) {
+    .row{padding: none !important;}
+
+    .card_main:hover{transform:translateY(0%);border:none;}
+    .feature{padding: none !important;}
+    .card_main {
+      height: 360px;
+      padding: 0.8rem;
+    }
+    .prd_row{padding: 0 !important;}
+  
+    .card_text h3 {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  
+    .price {
+      font-size: 1rem;
+    }
+  
+    .add_cart_btn {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .row{padding: none !important;}
+    .feature{padding: none !important;}
+    .card_main {
+      height: 340px;
+      padding: 0.5rem 0.2rem;
+    }
+    .prd_row{padding: 0 !important;}
+  
+  
+    .card_text h3 {
+      font-size: 0.95rem;
+    }
+  
+    .price,
+    .max_price,
+    .disc_percent {
+      font-size: 0.9rem;
+    }
+  
+    .add_cart_btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,9 @@
+.loginContainer{width: 100%;height: auto;background-color: #fbffff;}
+.login_column{background-color: #fbffff;padding: 1rem 2rem;height: 80vh;}
+.loginForm{background-color: aliceblue;padding: 1.3rem 2rem;}
+.login_column h2{font-weight: 600;}
+.inputDiv{margin-bottom: 1rem;}
+.loginBtn{background:var(--primary-color);color: #ffff;border-radius: 12px !important;transition: all 0.25 ease-in;}
+.loginBtn:hover,.loginBtn:focus{background-color: #0039b3;color: #ffff;}
+.image_col{background-color: #0159e8;border: none;}
+.loginImage{z-index: 0;position: relative !important;}

@@ -1,0 +1,17 @@
+.footerContainer{
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerContainer p{
+    font-weight: 500;
+color: #ffff;
+margin:0 ;
+padding: 0;
+}
+.footerContainer p a{text-decoration: none;color: #ffff;cursor: pointer;border: none;}
+.footerContainer p a:hover{
+    color: var(--secondary-color);
+}

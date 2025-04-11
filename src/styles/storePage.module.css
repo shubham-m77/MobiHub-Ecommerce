@@ -1,0 +1,171 @@
+
+.category_div ul{list-style: none;}
+.category_div li{
+border-bottom: 1.5px solid var(--secondary-color);
+font-size: 1.1rem;
+transition: all 0.1s ease-in-out;
+}
+.category_div li:hover{background-color:  var(--secondary-color);cursor: pointer;}
+
+/* Overall container styling */
+.storePage {
+    /* display: flex; */
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Left side: Categories dropdown */
+  .categoryContainer {
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  /* Category dropdown container styling */
+  .categoryDropdownContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .categoryTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 10px;
+  }
+  
+  /* Custom dropdown container */
+  .customDropdown {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Dropdown header */
+  .dropdownHeader {
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Arrow styling */
+  .arrow {
+    font-size: 14px;
+    color: var(--primary-color);
+  }
+  
+  /* Dropdown list container */
+  .dropdownListContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* List of options */
+  .dropdownList {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-top: 5px;
+    list-style: none;
+  }
+  
+  .dropdownItem {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect on item */
+  .dropdownItem:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Active item */
+  .dropdownItem:active {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Show dropdown list on hover */
+  .customDropdown:hover .dropdownList{
+    display: block;
+  }
+  /* Active item */
+.dropdownItem:active {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Show dropdown list on hover or when clicked */
+.customDropdown.open .dropdownList {
+  display: block;
+}
+
+  /* Right side: Products heading and product list */
+  .productSection {
+    flex: 1; /* Takes up remaining space */
+  }
+  
+  .productsHeading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 550;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Full-screen Product List styling */
+  .productList {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Make the layout responsive for smaller screens */
+  @media (max-width: 1024px) {
+    .productList {
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .productList {
+    }
+  
+    .categoryContainer {
+      flex: 0 0 200px; /* Smaller category container */
+    }
+  
+    .productsHeading {
+      font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+  }
+  
+  .primary_hr{border-color: var(--secondary-color);border-width: 3px;opacity: 1;margin-top:-0.9rem !important;}
