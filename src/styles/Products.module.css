@@ -131,8 +131,8 @@
     .card_main {
       height: 360px;
       padding: 0.8rem;
-      /* margin:0 !important;
-      border-radius: 0 !important; */
+ /* margin:0 !important; */
+      border-radius: 0 !important;
     }
     .prd_row{padding: 0 !important;}
   
