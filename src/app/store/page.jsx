@@ -26,9 +26,9 @@ const StorePage = async () => {
 const ProductList = ({ products }) => {
   return (
     <div className={styles.productList}>
-      <div className="row">
+      <div className="row mx-0">
         {products?.map((product) => (
-          <div className="col-3">
+          <div className="col-6 col-md-4 col-lg-3 mb-md-4 p-0 px-lg-1">
             <ProductBox product={product}  key={product.id} />
           </div>
         ))}

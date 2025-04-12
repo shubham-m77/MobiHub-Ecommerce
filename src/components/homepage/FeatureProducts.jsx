@@ -5,7 +5,7 @@ import styles from "@/styles/Products.module.css"
 import ProductBox from './ProductBox';
 const FeatureProducts = () => {
     const[products,setProducts]=useState([]);
-    fetch("https://fakestoreapi.in/api/products?limit=5")
+    fetch("https://fakestoreapi.in/api/products?limit=4")
 .then(res => res.json())
 .then(res => setProducts(res.products)
 );
@@ -23,7 +23,7 @@ const FeatureProducts = () => {
             <h4 className='text-center'>Sorry, Products Not Available...</h4>
           ) : (
             products.map((product) => (
-              <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
+              <div className="col-6 col-md-4 col-lg-3 mb-md-4 p-0" key={product.id}>
               <ProductBox product={product} />
               </div>
             ))

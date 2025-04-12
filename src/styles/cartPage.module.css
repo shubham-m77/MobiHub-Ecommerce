@@ -111,6 +111,7 @@
   
     .summaryBox {
       padding: 1.5rem 2.5rem !important;
+      min-height: auto;
     }
   
     .cartTable thead {

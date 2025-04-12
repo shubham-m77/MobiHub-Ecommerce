@@ -38,7 +38,7 @@ const loginPage = () => {
  
   return (
     <div className={`${styles.loginContainer} w-100`}>
-      <div className="row">
+      <div className="row flex-column-reverse flex-md-row">
         <div className={`col-md-4 ${styles.login_column}`}>
             <h2 className='text-center'>Login/Sign-in</h2>
            <form className={`${styles.loginForm} rounded shadow mt-3`} onSubmit={handleSubmit}>

@@ -14,7 +14,7 @@
     const { addToCart } = useCart();
     return (
     
-      <div className={`${styles.card_main} card shadow-sm rounded mx-lg-4`}>
+      <div className={`${styles.card_main} card shadow-sm rounded-lg rounded-none mx-md-4 m-0 `}>
           <Link href={"/store/products/"+product.id}><div className="card-img">
         <Image className={`${styles.productImg}`} src={product.image} fill alt={product.title} />
         </div>
