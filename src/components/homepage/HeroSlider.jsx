@@ -2,14 +2,18 @@
 import React, { useState, useEffect } from 'react';
 import styles from "@/styles/Hero.module.css";
 import Image from 'next/image';
+import oppo from "@/images/oppo_phone.png"
+import vivo from "@/images/vivo_phone.png"
+import smartwatch from "@/images/smartwatch.png"
+import earbuds from "@/images/earbuds.png"
+
 
 const HeroSlider = () => {
   const images = [
-    "https://www.91-img.com/gallery_images_uploads/9/d/9d526e8fa4acd95166633c52c5d1d3f958338b33.jpg",
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/2/d/a/-original-imahafrerjkrcsza.jpeg?q=70&crop=false",
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/smartwatch/p/j/a/-original-imah5upykzphmxkv.jpeg?q=70&crop=false",
-    "https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/3/d/p/-original-imah6zpws9yh5gca.jpeg?q=70&crop=false"
-  ];
+    vivo,
+    smartwatch,
+    oppo,
+    earbuds ] 
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
